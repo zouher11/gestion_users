@@ -1,0 +1,77 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Hôte : 127.0.0.1
+-- Généré le : dim. 13 avr. 2025 à 21:05
+-- Version du serveur : 10.4.32-MariaDB
+-- Version de PHP : 8.2.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de données : `gestionusers`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `nom` varchar(30) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `satat` varchar(20) DEFAULT NULL,
+  `passwoord` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `users`
+--
+
+INSERT INTO `users` (`id`, `nom`, `email`, `satat`, `passwoord`) VALUES
+(2, 'mohamed', 'mohamed9879@gmail.com', 'user', 'mohamed123'),
+(3, 'marouan', 'marouan23@gmail.com', 'admin', 'marouan123'),
+(4, 'zouhir', 'zouher2023@gmail.com', 'user', 'zouhir123'),
+(16, 'ageman', 'zouher2023@gmail.com', 'admin', 'agerman1234'),
+(23, 'zyad', 'issam98@gmail.com', 'admin', 'zyad123'),
+(24, 'zyad', 'mohamed9879@gmail.com', NULL, NULL),
+(25, 'zyad', 'zouher2023@gmail.com', NULL, NULL),
+(27, 'alex', 'alex.rem@gmail.com', NULL, NULL),
+(28, 'aya ', 'zouher2023@gmail.com', NULL, NULL),
+(29, 'bellie', 'belliesql12@gmail.com', NULL, NULL);
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
